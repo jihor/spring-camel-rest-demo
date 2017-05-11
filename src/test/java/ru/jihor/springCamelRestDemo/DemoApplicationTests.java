@@ -52,11 +52,11 @@ public class DemoApplicationTests {
             .body(new DemoRequest(subjectA, vehicle))
             .contentType(MediaType.APPLICATION_JSON_VALUE)
         .when()
-            .post("http://127.0.0.1:" + localServerPort + "/rest-api/demo")
+            .post("http://127.0.0.1:" + localServerPort + "/rest/demo")
         .then()
             .statusCode(200)
             .contentType(MediaType.APPLICATION_JSON_VALUE)
-            .body("message", equalTo("I am Service A. Your type is 1, last name is Patton"));
+            .body("message", equalTo("I am Service A. Your type is SubjectA, last name is Patton"));
     }
 
     @Test
@@ -65,11 +65,11 @@ public class DemoApplicationTests {
             .body(new DemoRequest(subjectB, vehicle))
             .contentType(MediaType.APPLICATION_JSON_VALUE)
         .when()
-            .post("http://127.0.0.1:" + localServerPort + "/rest-api/demo")
+            .post("http://127.0.0.1:" + localServerPort + "/rest/demo")
         .then()
             .statusCode(200)
             .contentType(MediaType.APPLICATION_JSON_VALUE)
-            .body("message", equalTo("I am Service B. Your type is 2, inn is 304"));
+            .body("message", equalTo("I am Service B. Your type is SubjectB, inn is 304"));
     }
 
 }

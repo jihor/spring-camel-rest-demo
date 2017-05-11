@@ -1,5 +1,6 @@
 package ru.jihor.springCamelRestDemo.model.req;
 
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -9,11 +10,12 @@ import java.io.Serializable;
  *         Created on 2017-05-10
  */
 @Data
+@ApiModel(description = "SubjectB: an entrepreneur class")
 public class SubjectB extends Subject implements Serializable {
     private String inn;
 
     public SubjectB() {
         super();
-        setType(2);
+        setType("SubjectB");
     }
 }

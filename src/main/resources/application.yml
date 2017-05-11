@@ -1,0 +1,8 @@
+# log to both log file and console
+logging:
+    file: logs/demo.log
+    pattern:
+        console: "%d %-5level %logger : %msg%n"
+    level:
+        root: INFO
+springfox.documentation.swagger.v2.path: /rest/docs
