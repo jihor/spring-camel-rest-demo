@@ -1,6 +1,6 @@
 ### Spring Boot + Camel REST example, with Swagger UI included
 
-Swagger UI: `127.0.0.1:8080/docs` 
+Swagger UI: `127.0.0.1:8080/docs`   
 REST endpoint: `localhost:8080/rest/demo`
 
 Swagger UI can be also run separately if needed:   
